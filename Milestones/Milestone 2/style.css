@@ -5,7 +5,14 @@
 .main-container {
   padding: 1rem;
 }
-
+.main-heading{
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-underline-position: under;
+  text-decoration-color: blue;
+}
 .container-one {
   width: 65%;
   margin-left: auto;
