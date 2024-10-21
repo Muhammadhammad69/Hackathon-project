@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <title>Static Resume</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container-one">
+        <div class="avatar">
+          <img
+            src="images/avatar.png"
+            alt="profile"
+            id="img-preview"
+            class="reset-all"
+          />
+        </div>
+        <div class="profile-picture">
+          <label for="upload-profile" id="up-profile">Upload Profile</label>
+          <input
+            type="file"
+            id="upload-profile"
+            accept=".jpeg, .jpg, .png"
+            onchange="changeImage('main')"
+            required
+          />
+        </div>
+        <div class="personal-info common-style">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <div class="input-personal-info">
+              <label for="name">Enter Your Name</label>
+              <input
+                type="text"
+                id="name"
+                class="reset-all"
+                placeholder="John Doe"
+              />
+              <label for="phone-number">Enter Phone Number</label>
+              <input
+                type="number"
+                id="phone-number"
+                class="reset-all"
+                placeholder="0312-1234567"
+              />
+              <label for="email-address">Enter Email Address</label>
+              <input
+                type="email"
+                id="email-address"
+                class="reset-all"
+                placeholder="example@gmail.com"
+              />
+              <label for="profession">Enter Profession</label>
+              <input
+                type="text"
+                id="profession"
+                class="reset-all"
+                placeholder="Student, Teacher, Engineer, Accountant, Doctor etc"
+              />
+            </div>
+          </fieldset>
+        </div>
+        <div class="education common-style">
+          <fieldset>
+            <legend>Education</legend>
+            <div class="education-info">
+              <label for="education-info">Enter Your Qualification</label>
+              <textarea name="Education" id="education-info" class="reset-all"></textarea>
+            </div>
+          </fieldset>
+        </div>
+        <div class="skills common-style">
+          <fieldset>
+            <legend>Skills</legend>
+            <div class="skills-info">
+              <label for="skills-info">Enter Your Skills</label>
+              <textarea name="Skills" id="skills-info" class="reset-all"></textarea>
+            </div>
+          </fieldset>
+        </div>
+        <div class="experience common-style">
+          <fieldset>
+            <legend>Experience</legend>
+            <div class="experience-info">
+              <label for="experience-info">Enter Your Experience</label>
+              <textarea name="Experience" id="experience-info" class="reset-all"></textarea>
+            </div>
+          </fieldset>
+        </div>
+        <div class="generate-cv">
+          <button id="generate-cv" onclick="getAllInfo()">Generate CV</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+
+      <div class="container-two" style="display: none;">
+        <div class="user-profile">
+          <img src="images/avatar.png" alt="Profile" id="user-profile" />
+        </div>
+        <!-- <div class="user-comp-info-sec"> -->
+        <div class="user-comp-info">
+          <div class="user-name">
+            <h1 id="user-name">Muhammad Hammad Ali Khan</h1>
+            <h2 id="user-profession">Student</h2>
+          </div>
+          <div class="user-education">
+            <h2>Education:</h2>
+            <div id="user-education-info">
+              <h3 id="user-edu-text">I am done BBa</h3>
+            </div>
+          </div>
+          <div class="user-skill">
+            <h2>Skills:</h2>
+            <div id="user-skills-info">
+              <h3 id="user-skills-text">
+                I am done Typescript language and learning nextjs
+              </h3>
+            </div>
+          </div>
+          <div class="user-experience">
+            <h2>Experience:</h2>
+            <div id="user-experience-info">
+              <h3 id="user-exp-text">
+                I am working 3 months in software house hammad hammad hammad
+                hammad hamma
+              </h3>
+            </div>
+          </div>
+          <div class="user-contact-info">
+            <h2>Contact Details:</h2>
+            <div id="user-email">
+              <i class="fa-regular fa-envelope email-icon"></i>
+              <h3 id="user-email-text">Hammad@gmail.com</h3>
+            </div>
+            <div id="user-phone-number">
+              <i class="fa-solid fa-phone phone-icon"></i>
+              <h3 id="user-number-text">0345-3379286</h3>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="edit">
+          <button id="#edit-button">Edit Resume</button>
+        </div> -->
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
