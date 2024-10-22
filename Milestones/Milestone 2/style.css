@@ -5,13 +5,14 @@
 .main-container {
   padding: 1rem;
 }
-.main-heading{
+.main-heading {
   margin-bottom: 1.5rem;
   text-align: center;
   text-decoration-line: underline;
   text-decoration-style: double;
   text-underline-position: under;
   text-decoration-color: blue;
+  line-height: 2.8rem;
 }
 .container-one {
   width: 65%;
@@ -41,6 +42,7 @@ input {
   font-weight: 500;
   font-size: 1.2rem;
   font-family: sans-serif;
+  
 }
 
 input:focus {
@@ -57,7 +59,7 @@ textarea {
   font-size: 1.2rem;
   height: 80px;
   font-family: sans-serif;
-
+  
   /* font-weight: bold; */
 }
 textarea:focus {
@@ -122,6 +124,7 @@ legend {
   text-underline-position: under;
   /* text-decoration-color: rgb(144, 144, 249); */
   text-decoration-color: blue;
+  line-height: 2.8rem;
 }
 
 .education-info {
@@ -171,7 +174,7 @@ legend {
 }
 #reset:hover {
   /* background-color: rgb(244, 50, 50) !important; */
-  color: blue
+  color: blue;
 }
 
 .container-two {
@@ -188,8 +191,6 @@ legend {
   border-radius: 12px;
   background-color: #e3f2ff;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
- 
-
 }
 
 .user-profile {
@@ -287,5 +288,24 @@ legend {
   .container-two {
     width: 95%;
   }
-  
+}
+@media only screen and (max-width: 380px) {
+  .main-container {
+    padding: 0.5rem;
+  }
+  .container-one {
+    width: 98%;
+  }
+  input {
+    width: 95%;
+    /* align-self: center; */
+  }
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .common-style {
+    border-width: 2px;
+    padding: 0.2rem 0.2rem 0.4rem 0.2rem;
+  }
 }

@@ -5,13 +5,14 @@
 .main-container {
   padding: 1rem;
 }
-.main-heading{
+.main-heading {
   margin-bottom: 1.5rem;
   text-align: center;
   text-decoration-line: underline;
   text-decoration-style: double;
   text-underline-position: under;
   text-decoration-color: blue;
+  line-height: 2.8rem;
 }
 .container-one {
   width: 65%;
@@ -122,6 +123,7 @@ legend {
   text-underline-position: under;
   /* text-decoration-color: rgb(144, 144, 249); */
   text-decoration-color: blue;
+  line-height: 2.8rem;
 }
 
 .education-info {
@@ -151,7 +153,6 @@ legend {
   width: 95%;
   display: flex;
   justify-content: center;
-
 }
 .reset-btn button {
   background-color: #6096b1;
@@ -168,33 +169,46 @@ legend {
 
 #reset:hover {
   /* background-color: rgb(244, 50, 50) !important; */
-  color: blue
+  color: blue;
 }
-
-
 
 @media only screen and (max-width: 800px) {
   .container-one {
     width: 80%;
   }
-  
 }
 @media only screen and (max-width: 500px) {
   .container-one {
     width: 95%;
   }
-  
 }
 @media only screen and (max-width: 360px) {
   .container-one {
     width: 98%;
   }
-  
 }
 @media only screen and (max-width: 950px) {
   .container-one {
     width: 95%;
   }
-  
-  
+}
+@media only screen and (max-width: 380px) {
+  .main-container{
+    padding: 0.5rem;
+  }
+  .container-one{
+    width: 98%;
+  }
+  input {
+    width: 95%;
+    /* align-self: center; */
+  }
+  textarea{
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .common-style {
+    border-width: 2px;
+    padding: 0.2rem 0.2rem 0.4rem 0.2rem;
+  }
 }
