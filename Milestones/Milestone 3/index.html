@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Milestone 2/milestone-two-style.css" />
+    <link rel="stylesheet" href="milestone-three-style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -13,7 +14,7 @@
   </head>
   <body>
     <div class="main-container">
-      <h1 class="main-heading">Milestone-Two: Dynamic Resume Builder</h1>
+      <h1 class="main-heading">Milestone-Three: Editable Resume Builder</h1>
       <div class="container-one">
         <div class="avatar">
           <img
@@ -107,13 +108,13 @@
             </div>
           </fieldset>
         </div>
-        <div class="generate-cv">
+        <div class="create-reset-buttons">
           <button id="generate-cv" onclick="getAllInfo()">Generate CV</button>
           <button id="reset">Reset</button>
         </div>
       </div>
 
-      <div class="container-two" style="display: none;">
+      <div class="container-two" >
         <div class="user-profile">
           <img src="images/avatar.png" alt="Profile" id="user-profile" />
         </div>
@@ -157,6 +158,9 @@
               <h3 id="user-number-text">0345-3379286</h3>
             </div>
           </div>
+        </div>
+        <div class="edit-resume">
+          <button id="edit">Edit Resume</button>
         </div>
       </div>
     </div>

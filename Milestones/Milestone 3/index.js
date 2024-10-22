@@ -35,12 +35,29 @@ function changeImage(value) {
     readImg.readAsDataURL(file);
   }
 }
-// const showDisplay = document.querySelector("#show");
-// showDisplay?.addEventListener("click", () => {
-//   const container: any = document.querySelector(".container-two");
-//   container.style.display = "flex";
-//   console.log(container);
-// });
+//ya variable reset btn ko get kr raha hain.
+const reset = document.querySelector("#reset");
+// or ya per me reset per click k function run kr raha hu jis sa resume me img profile or inputs or textarea me mojood content reset hojai ga.
+reset.addEventListener("click", () => {
+  //or resetAll variable me sary inputs or textareas get ho raha hain
+  const resetAll = document.querySelectorAll(".reset-all");
+  const imgValue = document.querySelector("#upload-profile");
+  for (let i = 0; i < resetAll.length; i++) {
+    if (resetAll[i].tagName.toLowerCase().trim() === "img") {
+      if (
+        resetAll[i].attributes[0].textContent.trim() !== "images/avatar.png"
+      ) {
+        resetAll[i].src = "images/avatar.png";
+        imgValue.value = "";
+      }
+    } else {
+      resetAll[i].value = "";
+    }
+  }
+});
+
+// Milestone 2 work is starting below.
+
 function getAllInfo() {
   const containerOne = document.querySelector(".container-one");
   const containerTwo = document.querySelector(".container-two");
@@ -125,10 +142,10 @@ function getAllInfo() {
   }
   if (flag) {
     setTimeout(() => {
-      
       containerOne.style.display = "none";
       containerTwo.style.display = "flex";
-    }, 3000);
+      window.scrollTo(0, 0);
+    }, 2000);
     console.log("work display");
     userNameDis.innerText = getNameV;
     userProfessionDis.innerText = getProfessionV;
@@ -139,24 +156,22 @@ function getAllInfo() {
     userPhoneNumberDis.innerText = getPhoneNumberV;
   }
 }
-//ya variable reset btn ko get kr raha hain.
-const reset = document.querySelector("#reset");
-// or ya per me reset per click k function run kr raha hu jis sa resume me img profile or inputs or textarea me mojood content reset hojai ga.
-reset.addEventListener("click", () => {
-  //or resetAll variable me sary inputs or textareas get ho raha hain
-  const resetAll = document.querySelectorAll(".reset-all");
-  const imgValue = document.querySelector("#upload-profile");
-  for (let i = 0; i < resetAll.length; i++) {
-    if (resetAll[i].tagName.toLowerCase().trim() === "img") {
-      if (
-        resetAll[i].attributes[0].textContent.trim() !== "images/avatar.png"
-      ) {
-        resetAll[i].src = "images/avatar.png";
-        imgValue.value = "";
-      }
-    }else{
-      resetAll[i].value = "";
-    }
-    
-  }
+
+//Milestone 3 work is starting below
+
+const editResume = document.querySelector("#edit");
+editResume.addEventListener("click", () => {
+  const containerOne = document.querySelector(".container-one");
+  //changingResumeText or changingResetText variable me hum generte-cv or reset k button ko get kr rahy hain or is ka inner-text change kr rahy hain.
+  const changingResumeText =
+    document.querySelector("#generate-cv");
+  const changingResetText = document.getElementById("reset");
+
+  containerOne.style.display = "flex";
+  window.scrollTo(0, 20);
+  changingResumeText.innerText = "Update Resume";
+  changingResetText.innerText = "Create New Resume"
+  console.dir(changingResetText);
+
+  console.log("hi");
 });

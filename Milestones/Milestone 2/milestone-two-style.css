@@ -150,13 +150,13 @@ legend {
   padding-top: 20px;
 }
 
-.generate-cv {
+.create-reset-buttons {
   width: 95%;
   display: flex;
   justify-content: center;
   gap: 3rem;
 }
-.generate-cv button {
+.create-reset-buttons button {
   background-color: #6096b1;
   color: black;
   font-weight: bold;
@@ -168,7 +168,7 @@ legend {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   cursor: pointer;
 }
-.generate-cv button:hover {
+.create-reset-buttons button:hover {
   /* background-color: rgb(95, 250, 95); */
   color: blue;
 }
@@ -262,6 +262,16 @@ legend {
   }
   .container-two {
     width: 80%;
+  }
+}
+@media only screen and (max-width: 600px){
+  .create-reset-buttons {
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+  }
+  .create-reset-buttons button {
+    width: 85%;
   }
 }
 @media only screen and (max-width: 800px) {
