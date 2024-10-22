@@ -197,7 +197,7 @@ legend {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 85%;
   margin: 0;
   margin-top: 2.5rem;
 }
@@ -232,7 +232,7 @@ legend {
 }
 .user-comp-info h3 {
   font-size: 1.5rem;
-  margin: 0.6rem 0.8rem;
+  margin: 0.8rem 0.8rem;
 }
 #user-email {
   display: flex;
@@ -256,7 +256,14 @@ legend {
   align-self: center;
   margin: auto 0.8rem;
 }
-
+@media only screen and (max-width:1116px){
+  .container-one {
+    width: 80%;
+  }
+  .container-two {
+    width: 80%;
+  }
+}
 @media only screen and (max-width: 800px) {
   .container-one {
     width: 80%;
@@ -312,5 +319,41 @@ legend {
   .common-style {
     border-width: 2px;
     padding: 0.2rem 0.2rem 0.4rem 0.2rem;
+  }
+}
+@media only screen and (max-width:400px){
+  .user-profile img{
+    width: 100%;
+    height: 100%;
+  }
+  .user-contact-info h3{
+    margin: 0;
+  }
+  #user-email{
+    gap: 0;
+    column-gap: 0.8rem;
+    margin-left: 0.8rem;
+  }
+  
+  .email-icon{
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  #user-email-text{
+    font-size: 1.2rem;
+    word-break: break-all;
+  }
+  #user-phone-number{
+    gap: 0;
+    column-gap: 0.8rem;
+    margin-left: 0.8rem;
+  }
+  .phone-icon{
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  #user-number-text{
+    font-size: 1.2rem;
+    word-break: break-all;
   }
 }
