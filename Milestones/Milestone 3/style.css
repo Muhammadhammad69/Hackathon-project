@@ -301,11 +301,16 @@ legend {
   }
   input {
     width: 95%;
-    /* align-self: center; */
+    align-self: center;
   }
   textarea{
-    width: 100%;
+    width: 98%;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  label{
+    margin-left: 4px;
   }
   .common-style {
     border-width: 2px;
