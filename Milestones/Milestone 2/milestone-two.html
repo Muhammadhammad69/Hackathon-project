@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Milestone 2/milestone-two-style.css" />
-    <link rel="stylesheet" href="milestone-three-style.css">
+    <link rel="stylesheet" href="./milestone-two-style.css">
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -14,11 +14,11 @@
   </head>
   <body>
     <div class="main-container">
-      <h1 class="main-heading">Milestone-Three: Editable Resume Builder</h1>
+      <h1 class="main-heading">Milestone-Two: Dynamic Resume Builder</h1>
       <div class="container-one">
         <div class="avatar">
           <img
-            src="images/avatar.png"
+            src="../images/avatar.png"
             alt="profile"
             id="img-preview"
             class="reset-all"
@@ -31,8 +31,20 @@
             id="upload-profile"
             accept=".jpeg, .jpg, .png"
             onchange="changeImage('main')"
-            required
+            onclick="checkValidation('img')"
           />
+          <p
+            style="
+              margin-top: 0.8rem;
+              color: red;
+              font-size: 18px;
+              font-weight: bold;
+              margin-left: 4px;
+              display: none;
+            "
+          >
+            Image is Required
+          </p>
         </div>
         <div class="personal-info common-style">
           <fieldset>
@@ -44,28 +56,80 @@
                 id="name"
                 class="reset-all"
                 placeholder="John Doe"
+                onblur="checkValidation('name')"
               />
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Name is Required
+              </p>
               <label for="phone-number">Enter Phone Number</label>
               <input
                 type="number"
                 id="phone-number"
                 class="reset-all"
                 placeholder="0312-1234567"
+                onblur="checkValidation('number')"
               />
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Phone Number is Required
+              </p>
               <label for="email-address">Enter Email Address</label>
               <input
                 type="email"
                 id="email-address"
                 class="reset-all"
                 placeholder="example@gmail.com"
+                onblur="checkValidation('email')"
               />
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Email is Required
+              </p>
               <label for="profession">Enter Profession</label>
               <input
                 type="text"
                 id="profession"
                 class="reset-all"
                 placeholder="Student, Teacher, Engineer, Accountant, Doctor etc"
+                onblur="checkValidation('prof')"
               />
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Profession is Required
+              </p>
             </div>
           </fieldset>
         </div>
@@ -78,7 +142,20 @@
                 name="Education"
                 id="education-info"
                 class="reset-all"
+                onblur="checkValidation('edu')"
               ></textarea>
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Education is Required
+              </p>
             </div>
           </fieldset>
         </div>
@@ -91,7 +168,20 @@
                 name="Skills"
                 id="skills-info"
                 class="reset-all"
+                onblur="checkValidation('skills')"
               ></textarea>
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Skills is Required
+              </p>
             </div>
           </fieldset>
         </div>
@@ -104,19 +194,32 @@
                 name="Experience"
                 id="experience-info"
                 class="reset-all"
+                onblur="checkValidation('exp')"
               ></textarea>
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Experience is Required
+              </p>
             </div>
           </fieldset>
         </div>
         <div class="create-reset-buttons">
-          <button id="generate-cv" onclick="getAllInfo()">Generate CV</button>
-          <button id="reset">Reset</button>
+          <button id="generate-cv" onclick="getAllInfo()">Create Resume</button>
+          <button id="reset">Reset Resume</button>
         </div>
       </div>
 
-      <div class="container-two" >
+      <div class="container-two" style="display: none">
         <div class="user-profile">
-          <img src="images/avatar.png" alt="Profile" id="user-profile" />
+          <img src="../images/avatar.png" alt="Profile" id="user-profile" />
         </div>
         <!-- <div class="user-comp-info-sec"> -->
         <div class="user-comp-info">
@@ -159,12 +262,9 @@
             </div>
           </div>
         </div>
-        <div class="edit-resume">
-          <button id="edit">Edit Resume</button>
-        </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./index.js"></script>
+   
+    <script src="./milestone-two.js"></script>
   </body>
 </html>
