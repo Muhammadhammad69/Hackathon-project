@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./milestone-four-style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    /> -->
+
+    <title>Static Resume</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="main-heading">Milestone-Three: Editable Resume Builder</h1>
+      <div class="container-one">
+        <div class="avatar">
+          <img
+            src="../images/avatar.png"
+            alt="profile"
+            id="img-preview"
+            class="reset-all"
+          />
+        </div>
+        <div class="profile-picture">
+          <label for="upload-profile" id="up-profile">Upload Profile</label>
+          <input
+            type="file"
+            id="upload-profile"
+            accept=".jpeg, .jpg, .png"
+            onchange="changeImage('main')"
+            onclick="checkValidation('img')"
+          />
+          <p
+            style="
+              margin-top: 0.8rem;
+              color: red;
+              font-size: 18px;
+              font-weight: bold;
+              margin-left: 4px;
+              display: none;
+            "
+          >
+            Image is Required
+          </p>
+        </div>
+        <div class="personal-info common-style">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <div class="input-personal-info">
+              <label for="username"
+                >Enter Your Username</label
+              >
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter Your Username"
+                class="reset-all"
+                onblur="checkValidation('username')"
+              />
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Phone Number is Required
+              </p>
+              <label for="name">Enter Your Name</label>
+              <input
+                type="text"
+                id="name"
+                class="reset-all"
+                placeholder="John Doe"
+                onblur="checkValidation('name')"
+              />
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Name is Required
+              </p>
+              <label for="phone-number">Enter Phone Number</label>
+              <input
+                type="number"
+                id="phone-number"
+                class="reset-all"
+                placeholder="0312-1234567"
+                onblur="checkValidation('number')"
+              />
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Phone Number is Required
+              </p>
+              <label for="email-address">Enter Email Address</label>
+              <input
+                type="email"
+                id="email-address"
+                class="reset-all"
+                placeholder="example@gmail.com"
+                onblur="checkValidation('email')"
+              />
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Email is Required
+              </p>
+              <label for="profession">Enter Profession</label>
+              <input
+                type="text"
+                id="profession"
+                class="reset-all"
+                placeholder="Student, Teacher, Engineer, Accountant, Doctor etc"
+                onblur="checkValidation('prof')"
+              />
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Profession is Required
+              </p>
+            </div>
+          </fieldset>
+        </div>
+        <div class="education common-style">
+          <fieldset>
+            <legend>Education</legend>
+            <div class="education-info">
+              <label for="education-info">Enter Your Qualification</label>
+              <textarea
+                name="Education"
+                id="education-info"
+                class="reset-all"
+                onblur="checkValidation('edu')"
+              ></textarea>
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Education is Required
+              </p>
+            </div>
+          </fieldset>
+        </div>
+        <div class="skills common-style">
+          <fieldset>
+            <legend>Skills</legend>
+            <div class="skills-info">
+              <label for="skills-info">Enter Your Skills</label>
+              <textarea
+                name="Skills"
+                id="skills-info"
+                class="reset-all"
+                onblur="checkValidation('skills')"
+              ></textarea>
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Skills is Required
+              </p>
+            </div>
+          </fieldset>
+        </div>
+        <div class="experience common-style">
+          <fieldset>
+            <legend>Experience</legend>
+            <div class="experience-info">
+              <label for="experience-info">Enter Your Experience</label>
+              <textarea
+                name="Experience"
+                id="experience-info"
+                class="reset-all"
+                onblur="checkValidation('exp')"
+              ></textarea>
+              <p
+                style="
+                  margin-top: 0.2rem;
+                  color: red;
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-left: 4px;
+                  display: none;
+                "
+              >
+                Experience is Required
+              </p>
+            </div>
+          </fieldset>
+        </div>
+        <div class="create-reset-buttons">
+          <button id="generate-cv" onclick="getAllInfo()">Create Resume</button>
+          <button id="reset">Reset Resume</button>
+        </div>
+      </div>
+
+      <div class="container-two">
+        <div class="user-profile">
+          <img src="../images/avatar.png" alt="Profile" id="user-profile" />
+          <div class="image-edit">
+            <button
+              id="img-btn"
+              class="edit common-edit-btn-style"
+              style="width: 100%; display: none"
+              onclick="editValue('change image')"
+            >
+              Change Image
+            </button>
+          </div>
+        </div>
+        <!-- <div class="user-comp-info-sec"> -->
+        <div class="user-comp-info">
+          <div class="user-name">
+            <div class="content-edit-btn">
+              <button
+                id="name-btn"
+                class="edit common-edit-btn-style"
+                style="display: none"
+                onclick="editValue('name')"
+              >
+                Edit
+              </button>
+            </div>
+            <h1 id="user-name" class="focusVisible">
+              Muhammad Hammad Ali Khan
+            </h1>
+            <h2 id="user-profession" class="focusVisible">Student</h2>
+          </div>
+          <div class="user-education">
+            <div class="edu-heading common-heading-div-style">
+              <h2>Education:</h2>
+              <button
+                id="edu-btn"
+                class="edit common-edit-btn-style"
+                style="display: none"
+                onclick="editValue('education')"
+              >
+                Edit
+              </button>
+            </div>
+            <div id="user-education-info">
+              <h3 id="user-edu-text" class="focusVisible">I am done BBa</h3>
+            </div>
+          </div>
+          <div class="user-skill">
+            <div class="skills-heading common-heading-div-style">
+              <h2>Skills:</h2>
+              <button
+                id="skills-btn"
+                class="edit common-edit-btn-style"
+                style="display: none"
+                onclick="editValue('skills')"
+              >
+                Edit
+              </button>
+            </div>
+            <div id="user-skills-info">
+              <h3 id="user-skills-text" class="focusVisible">
+                I am done Typescript language and learning nextjs
+              </h3>
+            </div>
+          </div>
+          <div class="user-experience">
+            <div class="exp-heading common-heading-div-style">
+              <h2>Experience:</h2>
+              <button
+                id="exp-btn"
+                class="edit common-edit-btn-style"
+                style="display: none"
+                onclick="editValue('experience')"
+              >
+                Edit
+              </button>
+            </div>
+            <div id="user-experience-info">
+              <h3 id="user-exp-text" class="focusVisible">
+                I am working 3 months in software house hammad hammad hammad
+                hammad hamma
+              </h3>
+            </div>
+          </div>
+          <div class="user-contact-info">
+            <div class="contact-heading common-heading-div-style">
+              <h2>Contact Details:</h2>
+              <button
+                id="contact-btn"
+                class="edit common-edit-btn-style"
+                style="display: none"
+                onclick="editValue('contact')"
+              >
+                Edit
+              </button>
+            </div>
+            <div id="user-email">
+              <i class="fa-regular fa-envelope email-icon"></i>
+              <h3 id="user-email-text" class="focusVisible">
+                Hammad@gmail.com
+              </h3>
+            </div>
+            <div id="user-phone-number">
+              <i class="fa-solid fa-phone phone-icon"></i>
+              <h3 id="user-number-text" class="focusVisible">0345-3379286</h3>
+            </div>
+          </div>
+        </div>
+        <div class="create-edit-btn">
+          <button id="create-res">Create Resume</button>
+          <button id="edit-Resume">Edit Resume</button>
+        </div>
+
+        <div class="download-button">
+          <button id="download-res-link"> Download Resume </button>
+          <button id="download-jpeg"> Download as Jpeg </button>
+          <button id="download-pdf"> Download as Pdf </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.0/html2pdf.bundle.min.js"
+    ></script>
+    <script src="
+     https://cdn.jsdelivr.net/npm/dom-to-image-more@3.5.0/dist/dom-to-image-more.min.js
+    "></script>
+    <script src="./milestone-four.js"></script>
+  </body>
+</html>

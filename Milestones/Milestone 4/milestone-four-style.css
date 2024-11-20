@@ -3,7 +3,7 @@
   padding: 0;
 }
 .main-container {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .main-heading {
   margin-bottom: 1.5rem;
@@ -32,12 +32,12 @@
 .small-info {
   display: flex;
 }
- /* ya add-red class me js kay through hangle karoga  */
-.add-red{
+/* ya add-red class me js kay through hangle karoga  */
+.add-red {
   border-color: red !important;
 }
 
-.add-red:focus{
+.add-red:focus {
   border: 2px solid red !important;
 }
 input {
@@ -49,7 +49,6 @@ input {
   font-weight: 500;
   font-size: 1.2rem;
   font-family: sans-serif;
-  
 }
 
 input:focus {
@@ -66,7 +65,7 @@ textarea {
   font-size: 1.2rem;
   height: 80px;
   font-family: sans-serif;
-  
+
   /* font-weight: bold; */
 }
 textarea:focus {
@@ -199,14 +198,49 @@ legend {
   background-color: #e3f2ff;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
-.container-two h3{
+.content-edit-btn {
+  display: flex;
+  justify-content: end;
+}
+/*  */
+.focusVisible:focus-visible{
+
+  /* border: none; */
+  outline: none;
+  /* outline-color: none !important; */
+  border: 3px solid #96c8dd;
+  border-radius: 1rem;
+  margin-top: 0.4rem;
+  padding: 0.3rem;
+  
+}
+/* common-edit-btn-style me hum resume me mojood taman edit btn k style is class say add kr rahy hain*/
+.common-edit-btn-style {
+  border: none;
+  background-color: #6096b1;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 8%;
+  padding: 0.5rem;
+  /* border: none; */
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+}
+.common-edit-btn-style:hover{
+  color: blue;
+}
+.container-two h3 {
   word-break: break-all;
   text-wrap: wrap;
 }
 .user-profile {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  row-gap: 3rem;
   width: 85%;
   margin: 0;
   margin-top: 2.5rem;
@@ -244,6 +278,11 @@ legend {
   font-size: 1.5rem;
   margin: 0.8rem 0.8rem;
 }
+/*common-heading-div-style class say hum container two k andar sary edit button k parent div ko style de rahy hain except first edit button  */
+.common-heading-div-style{
+  display: flex;
+  justify-content: space-between;
+}
 #user-email {
   display: flex;
   gap: 0.5rem;
@@ -266,7 +305,62 @@ legend {
   align-self: center;
   margin: auto 0.8rem;
 }
-@media only screen and (max-width:1116px){
+.create-edit-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  width: 100%;
+  justify-content: center;
+  /* margin-bottom: 1rem; */
+}
+
+.create-edit-btn button {
+  border: none;
+  background-color: #6096b1;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 70%;
+  padding: 0.5rem;
+  /* border: none; */
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+}
+.create-edit-btn button:hover {
+  color: blue;
+}
+.download-button {
+  display: flex;
+  width: 93%;
+  column-gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.download-res-link {
+  width: inherit;
+  height: inherit;
+  /* width: 40%; */
+}
+
+.download-button button {
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #6096b1;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 40%;
+  padding: 0.5rem;
+  /* border: none; */
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1116px) {
   .container-one {
     width: 80%;
   }
@@ -274,7 +368,7 @@ legend {
     width: 80%;
   }
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   .create-reset-buttons {
     flex-direction: column;
     row-gap: 1rem;
@@ -317,23 +411,23 @@ legend {
   }
 }
 @media only screen and (max-width: 380px) {
-  .main-container{
+  .main-container {
     padding: 0.5rem;
   }
-  .container-one{
+  .container-one {
     width: 98%;
   }
   input {
     width: 95%;
     align-self: center;
   }
-  textarea{
+  textarea {
     width: 98%;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
   }
-  label{
+  label {
     margin-left: 4px;
   }
   .common-style {
@@ -341,39 +435,50 @@ legend {
     padding: 0.2rem 0.2rem 0.4rem 0.2rem;
   }
 }
-@media only screen and (max-width:400px){
-  .user-profile img{
+@media only screen and (max-width: 400px) {
+  .user-profile img {
     width: 200px;
     height: 200px;
   }
-  .user-contact-info h3{
+  .user-contact-info h3 {
     margin: 0;
   }
-  #user-email{
+  #user-email {
     gap: 0;
     column-gap: 0.8rem;
     margin-left: 0.8rem;
   }
-  
-  .email-icon{
+
+  .email-icon {
     font-size: 1.5rem;
     margin: 0;
   }
-  #user-email-text{
+  #user-email-text {
     font-size: 1.2rem;
     word-break: break-all;
   }
-  #user-phone-number{
+  #user-phone-number {
     gap: 0;
     column-gap: 0.8rem;
     margin-left: 0.8rem;
   }
-  .phone-icon{
+  .phone-icon {
     font-size: 1.5rem;
     margin: 0;
   }
-  #user-number-text{
+  #user-number-text {
     font-size: 1.2rem;
     word-break: break-all;
+  }
+}
+@media only screen and (max-width: 651px) {
+  .download-button {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    width: 100%;
+  }
+  .download-button a {
+    width: 70%;
   }
 }
